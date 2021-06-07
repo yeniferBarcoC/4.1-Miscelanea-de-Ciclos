@@ -16,9 +16,11 @@ fc.simulador_caida_libre(altura)
 
 #Llamado de la fncion de generador de generaciones
 generacion= int(input("\nIngrese el numero de la generación:"))
-fc.generador_generaciones(generacion)
+total_personas=fc.generador_generaciones(generacion)
+print("Total de personas en la familia hasta ahora:",total_personas)
 
 #Llamado de la fncion de constructor de triangilos
-
+pisos = int(input("Por favor ingrese el número de pisos:"))
+fc.constructor_triangulos(pisos)
 #Llamado de la fncion de constructor de tableros
 
