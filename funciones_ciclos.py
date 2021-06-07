@@ -92,6 +92,38 @@ def constructor_triangulos(pisos):
 
 
 def constructor_tableros(longitud):
-  #TODO Comentar código
-  #TODO Implementar la función
-  return "No implementada aún"
+    """ 
+    Parameters
+    ----------
+    longitud:int
+        numero de cuadros en el tablero es decir nxn
+    Return:
+    -------
+    """
+    contador=1 #variable que cuenta el numero de cuadros horizontales
+    contador_vertical=1 #variable que cuenta el numero de cuadros verticales
+    salto_linea=0 #variable que guarda en que punto hace el salto de linea
+
+    blanco="---"
+    negro="***"
+    if longitud >0:
+        while contador<=longitud:
+        
+            if salto_linea<3 and contador_vertical<=longitud:
+                #comprueba si es impar
+                if (contador % 2!=0 and contador_vertical % 2!=0) or (contador % 2==0 and contador_vertical % 2==0):
+                    print(blanco,end="")
+                    contador+=1
+                elif (contador % 2==0 and contador_vertical % 2!=0) or (contador % 2!=0 and contador_vertical % 2==0):
+                    print(negro,end="")
+                    contador+=1
+            
+            if contador>longitud:
+                contador=1
+                salto_linea+=1
+                print("",end="\n")
+            elif salto_linea==3:
+                salto_linea=0
+                contador_vertical+=1
+            elif contador_vertical>longitud:
+                break

@@ -20,8 +20,10 @@ total_personas=fc.generador_generaciones(generacion)
 print("Total de personas en la familia hasta ahora:",total_personas)
 
 #Llamado de la fncion de constructor de triangilos
-pisos = int(input("Por favor ingrese el número de pisos:"))
+pisos = int(input("\nPor favor ingrese el número de pisos:"))
 fc.constructor_triangulos(pisos)
 
 #Llamado de la fncion de constructor de tableros
+longitud=int(input("\nIngrese la longitud del tablero:"))
+fc.constructor_tableros(longitud)
 
