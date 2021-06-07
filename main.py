@@ -22,5 +22,6 @@ print("Total de personas en la familia hasta ahora:",total_personas)
 #Llamado de la fncion de constructor de triangilos
 pisos = int(input("Por favor ingrese el número de pisos:"))
 fc.constructor_triangulos(pisos)
+
 #Llamado de la fncion de constructor de tableros
 

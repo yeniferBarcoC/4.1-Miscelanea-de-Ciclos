@@ -71,7 +71,24 @@ def constructor_triangulos(pisos):
     -------
 
     """
+    numero_piso=1 #cuenta el numero del piso
+    numero=0 #sumando los numeros
+    salto=1 #cuenta en que punto debe hacer el salto
 
+    if pisos >0:
+        while numero_piso<=pisos:
+            numero=numero+1
+            print(numero,end=" ")#Imprime varios print en la misma linea
+            
+            #Compruena si el salto y el numero de pisos es diferente, ya que si son iguales se hace el sato de linea
+            if salto!=numero_piso:
+                salto+=1
+            else:
+                print("\n")
+                salto=1
+                numero_piso+=1
+    else:
+        print("Ingrese un valor mayor a cero")
 
 
 def constructor_tableros(longitud):
